@@ -1,0 +1,59 @@
+.header-principal{
+    padding-top: 20px;
+    margin-bottom: 100px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo-figma{
+            width: 40%;
+        }
+        .menu-header-desktop{
+            display: none;
+        }
+        .menu-header-mobile{
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .button{
+                    @include button-black;
+                    font-size: 13px;
+                }
+                .menu-desplegable{
+                    position: relative;
+                    &:hover{
+                        cursor: pointer;
+                        .menu{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .menu{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 100%;
+                        right: 5%;
+                        margin-top: 10px;
+                        opacity: 0;
+                        visibility: hidden;
+                        overflow: hidden;
+                        transition: opacity 2s ease, visibility 2s ease ;
+                        a{
+                            text-decoration: none;
+                            font-size: 13px;
+                            &:hover{
+                                color: $blue;
+                            }
+                        }
+                    }
+                    img{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,163 @@
+<!--Obligatorio para que el navegador lo lea perfecto en lenguaje HTML-->
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!--Aqui el titulo para los buscadores-->
+  <title>Proyecto - Figma para desarrolladores</title>
+  
+  <!--Descripcion que sale al buscarlo en el navegador-->
+  <meta name="description" content="figma">
+
+  <!--Palabras claves para los buscadores en navegadores-->
+  <meta name="keywords" content="figma">
+
+  <!--Autor de la pagina-->
+  <meta name="autor" content="Fran">
+
+  <!--Añadimos la hoja de estilo CSS o SASS-->
+  <script defer type="module" src="/main.js"></script>
+
+  <!--Favicon de la pagina(icono)-->
+  <link rel="icon" type="/vite.svg" href="/vite.svg" />
+
+  <!--Codificacion-->
+  <meta charset="UTF-8">
+
+  <!--Para que la web sea resposinve(El tamaño segun el dispositivo)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Para algunos navegadores moviles(Color parte de arriba del HEADER)-->
+  <meta name="theme-color" content="FF0000">
+</head>
+
+<body>
+  <header class="header-principal">
+    <div class="container">
+      <img class="logo-figma" src="icons/icon-figma-mobile.svg" alt="logo-principal">
+      <nav class="menu-header-desktop">
+        <ul class="menu-desktop">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="login-desktop">
+          <li><a class="button" href="#">Login</a></li>
+        </ul>
+      </nav>
+      <nav class="menu-header-mobile">
+        <ul>
+          <li><a class="button" href="#">Login</a></li>
+          <li class="menu-desplegable"><img src="icons/icon-login-mobile.svg" alt="icon-menu-desplegable">
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main-principal">
+    <div class="container">
+      <div class="hero-title">
+        <h1>Work at the speed of thought.</h1>
+        <p>Most calendars are designed for teams. 
+          Slate is designed for freelancers who 
+          want a simple way to plan 
+          their schedule.
+        </p>
+      </div>
+      <nav class="buttons-hero">
+        <ul>
+          <li><a class="button-blue" href="#">Try For Free</a></li>
+          <li><a class="button-black" href="#">Learn More</a></li>
+        </ul>
+      </nav>
+    </div>
+    <img class="image-hero-mobile" src="img/image-hero-mobile.png" alt="">
+    <div class="container">
+      <div class="features-title">
+        <h2>FEATURES</h2>
+        <p>Most calendars are designed for teams. 
+          Slate is designed for freelancers who want 
+          a simple way to plan their schedule.
+        </p>
+      </div>
+      <div class="features-image-description">
+        <div class="images">
+          <img class="image-chatbox-mobile" src="img/image-chatbox-mobil.png" alt="">
+          <img class="image-graphic-mobile" src="img/image-graphic-mobile.png" alt="">
+        </div>
+        <div class="description">
+          <article>
+            <div class="title-description">
+              <span><img src="icons/icon-cubiertos.svg" alt=""></span>
+              <h3>A single source or truth</h3>
+            </div>
+            <p>When you add work to your 
+              Slate calendar we automatically 
+              calculate useful insights 
+            </p>
+          </article>
+          <article>
+            <div class="title-description">
+              <span><img src="icons/icon-alien.svg" alt=""></span>
+              <h3>Intuitive interface</h3>
+            </div>
+            <p>When you add work to your 
+              Slate calendar we automatically 
+              calculate useful insights 
+            </p>
+          </article>
+          <article>
+            <div class="title-description">
+              <span><img src="icons/icon-infinite.svg" alt=""></span>
+              <h3>Or with rules</h3>
+            </div>
+            <p>When you add work to your 
+              Slate calendar we automatically 
+              calculate useful insights 
+            </p>
+          </article>
+        </div>
+      </div>
+      <section class="contents">
+        <div class="content-title">
+          <h2>Contents</h2>
+          <p>We focus on ergonomics and 
+            meeting you where you work. 
+            It's only a keystroke away.</p>
+        </div>
+        <div class="images-content">
+          <article>
+            <h3>Work</h3>
+            <p>Ever wondered if you're too reliant 
+              on a client for work? Slate helps 
+              you identify .
+            </p>
+            <a class="button-blue" href="#">Sign Up</a>
+            <img class="macbok-mobile" src="img/macbok-mobile.png" alt="">
+          </article>
+          <article>
+            <h3>Design with real data</h3>
+            <p>Ever wondered if you're too reliant 
+              on a client for work? Slate helps 
+              you identify .
+            </p>
+            <a class="button-blue" href="#">Sign Up</a>
+            <img class="notification-mobile" src="img/notiificatiions-mobile.png" alt="">
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer> 
+
+  </footer>
+</body>
+</html>
+

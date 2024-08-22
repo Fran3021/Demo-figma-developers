@@ -1,0 +1,171 @@
+.main-principal{
+    .image-hero-mobile{
+        position: relative;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .container{
+        .hero-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            h1{
+                font-size: 40px;
+                width: 80%;
+                font-weight: normal;
+                text-align: center;
+                line-height: 50px;
+            }
+            p{
+                font-size: 18px;
+                text-align: center;
+                font-weight: normal;
+            }
+        }
+        .buttons-hero{
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 70px;
+                .button-blue{
+                    @include button-blue;
+                }
+                .button-black{
+                    @include button-black;
+                }
+            }
+        }
+        .features-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            h2{
+                font-size: 45px;
+                font-weight: normal;
+            }
+            p{
+                font-size: 17px;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+        .features-image-description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin-bottom: 120px;
+            .images{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .image-graphic-mobile{
+                    position: absolute;
+                    bottom: -20%;
+                }
+            }
+            .description{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                article{
+                    width: 70%;
+                    .title-description{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+                        h3{
+                            font-size: 17px;
+                            width: 55%;
+                            font-weight: normal;
+                        }
+                    }
+                    p{
+                        font-size: 15px;
+                        width: 94%;
+                    }
+                }
+            }
+        }
+        .contents{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            .content-title{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                h2{
+                    font-size: 45px;
+                    font-weight: normal;
+                }
+                p{
+                    font-size: 17px;
+                    font-weight: normal;
+                    text-align: center;
+                    width: 70%;
+                }
+            }
+            .images-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                article{
+                    padding:30px 20px 30px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 50px;
+                    background-color: $white;
+                    width: 70%;
+                    border-radius: 10px;
+                    h3{
+                        color: $black-dark;
+                        font-size: 17px;
+                        width: 55%;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+                    p{
+                        color: $silver;
+                        font-size: 13px;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+                    .button-blue{
+                        @include button-blue;
+                        &:hover{
+                            background-color: $black;
+                            color: $blue;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
