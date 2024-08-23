@@ -1,0 +1,54 @@
+.footer-principal{
+    margin-bottom: 140px;
+    .footer-uls{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        margin-bottom: 80px;
+        margin-left: 20%;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .head{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: normal;
+            }
+        }
+    }
+    .footer-socials{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-left: 20%;
+        .location{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            p{
+                font-size: 14px;
+            }
+        }
+        .phone{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            p{
+                font-size: 14px;
+            }
+        }
+        .redes{
+            ul{
+                display: flex;
+                gap: 25px;
+                align-items: center;
+            }
+        }
+    }
+}

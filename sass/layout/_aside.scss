@@ -1,0 +1,28 @@
+.aside-principal{
+    background-color: $black-light;
+    margin-bottom: 140px;
+    .opentype{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        .opentype-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            h2{
+                font-size: 45px;
+                font-weight: normal;
+                text-align: center;
+                line-height: 50px;
+            }
+            .button-blue{
+                @include button-blue;
+            }
+        }
+        .image-opentype-mobile{
+            width: 100%;
+        }
+    }
+}

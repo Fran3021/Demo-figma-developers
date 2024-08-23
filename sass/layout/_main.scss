@@ -108,6 +108,7 @@
             justify-content: center;
             align-items: center;
             gap: 50px;
+            margin-bottom: 140px;
             .content-title{
                 display: flex;
                 flex-direction: column;
@@ -165,6 +166,147 @@
                         width: 100%;
                     }
                 }
+            }
+        }
+        .gallery{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 140px;
+            .gallery-title{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                h2{
+                    font-size: 45px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+                p{
+                    font-size: 17px;
+                    font-weight: normal;
+                    text-align: center;
+                    width: 70%;
+                }
+            }
+            .gallery-images-mobile{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                .image-1-gallery-mobile{
+                    width: 88%;
+                    border-radius: 15px;
+                }
+                .image-2-gallery-mobile{
+                    width: 86%;
+                    border-radius: 15px;
+                }
+                .image-3-gallery-mobile{
+                    width: 84%;
+                    border-radius: 15px;
+                }
+                .image-4-gallery-mobile{
+                    width: 82%;
+                    border-radius: 15px;
+                }
+            }
+            .gallery-images-desktop{
+                display: none;
+            }
+            .button-black{
+                @include button-black;
+            }
+        }
+        .partners{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 140px;
+            .partners-title{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                h2{
+                    font-size: 45px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+                p{
+                    font-size: 17px;
+                    font-weight: normal;
+                    text-align: center;
+                    width: 70%;
+                }
+            }
+            .partners-icons{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .icons-upers{
+                    display: flex;
+                    gap: 35px;
+                }
+                .icons-lowers{
+                    display: flex;
+                    gap: 35px;
+                }
+            }
+            .button-black{
+                @include button-black;
+            }
+        }
+        .testimonials{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 140px;
+            h2{
+                font-size: 45px;
+                font-weight: normal;
+                text-align: center;
+            }
+            .testimonials-mobile{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                article{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 30px 30px 30px 40px;
+                    border: 1px solid #565656;
+                    border-radius: 15px;
+                    width: 80%;
+                    gap: 30px;
+                    .title-testimonials{
+                        display: flex;
+                        gap: 20px;
+                        h3{
+                            width: 65%;
+                            font-size: 17px;
+                            font-weight: normal;
+                        }
+                    }
+                    p{
+                        font-size: 15px;
+                        font-weight: normal;
+                        text-align: left;
+                    }
+                }
+            }
+            .testimonials-desktop{
+                display: none;
             }
         }
     }
