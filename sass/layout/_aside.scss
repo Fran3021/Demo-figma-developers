@@ -1,28 +1,63 @@
 .aside-principal{
-    background-color: $black-light;
     margin-bottom: 140px;
+    background-color: $black-light;
+    @include breakpoint(desktopxl){
+        background-color: $black;
+        margin-bottom: 200px;
+    }
     .opentype{
         display: flex;
         flex-direction: column;
         gap: 80px;
+        @include breakpoint(desktopxl){
+            flex-direction: row;
+            gap: 0px;
+            justify-content: space-between;
+        }
         .opentype-title{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 30px;
+            @include breakpoint(desktopxl){
+                align-items: flex-start;
+                padding-left: 70px;
+                gap: 50px;
+            }
             h2{
                 font-size: 45px;
                 font-weight: normal;
                 text-align: center;
                 line-height: 50px;
+                @include breakpoint(desktopxl){
+                    text-align: left;
+                }
+                @include breakpoint(desktopxxl){
+                    width: 80%;
+                }
             }
             .button-blue{
                 @include button-blue;
+                @include breakpoint(desktopxl){
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    padding: 15px 60px
+                }
             }
         }
         .image-opentype-mobile{
             width: 100%;
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .image-opentype-desktop{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                border-bottom-right-radius: 25px;
+            }
         }
     }
 }

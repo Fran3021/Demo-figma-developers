@@ -3,6 +3,17 @@
         position: relative;
         width: 100%;
         margin-bottom: 100px;
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+    .image-hero-desktop{
+        display: none;
+        @include breakpoint(desktopxl){
+            display: block;
+            width: 100%;
+            margin-bottom: 100px;
+        }
     }
     .container{
         .hero-title{
@@ -12,17 +23,36 @@
             align-items: center;
             gap: 20px;
             margin-bottom: 40px;
+            @include breakpoint(tablethorizontal){
+                gap: 40px;
+                margin-bottom: 80px;
+            }
             h1{
                 font-size: 40px;
                 width: 80%;
                 font-weight: normal;
                 text-align: center;
                 line-height: 50px;
+                @include breakpoint(tablethorizontal){
+                    font-size: 60px;
+                    width: 65%;
+                    line-height: 70px;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 70px;
+                }
             }
             p{
                 font-size: 18px;
                 text-align: center;
                 font-weight: normal;
+                @include breakpoint(tablethorizontal){
+                    font-size: 21px;
+                    width: 75%;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 25px;
+                }
             }
         }
         .buttons-hero{
@@ -33,11 +63,23 @@
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 70px;
+                @include breakpoint(tablethorizontal){
+                    flex-direction: row;
+                    margin-bottom: 40px
+                }
                 .button-blue{
                     @include button-blue;
+                    @include breakpoint(desktopxl){
+                        font-size: 21px;
+                        padding: 15px 60px
+                    }
                 }
                 .button-black{
                     @include button-black;
+                    @include breakpoint(desktopxl){
+                        font-size: 21px;
+                        padding: 15px 60px
+                    }
                 }
             }
         }
@@ -48,14 +90,27 @@
             align-items: center;
             gap: 20px;
             margin-bottom: 40px;
+            @include breakpoint(tablethorizontal){
+                margin-bottom: 70px;
+            }
             h2{
                 font-size: 45px;
                 font-weight: normal;
+                @include breakpoint(desktopxl){
+                    font-size: 55px;
+                }
             }
             p{
                 font-size: 17px;
                 font-weight: normal;
                 text-align: center;
+                @include breakpoint(tablethorizontal){
+                    font-size: 21px;
+                    width: 75%;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 25px;
+                }
             }
         }
         .features-image-description{
@@ -65,15 +120,52 @@
             align-items: center;
             gap: 100px;
             margin-bottom: 120px;
+            @include breakpoint(desktopxl){
+                flex-direction: row;
+                gap: 0px;
+                margin-bottom: 250px;
+            }
             .images{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                @include breakpoint(tablethorizontal){
+                    margin-bottom: 20px;
+                }
+                .image-chatbox-mobile{
+                    @include breakpoint (tablet){
+                        width: 130%;
+                    }
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-chatbox-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                    }
+                }
                 .image-graphic-mobile{
                     position: absolute;
                     bottom: -20%;
+                    @include breakpoint(tablet){
+                        width: 100%;
+                    }
+                    @include breakpoint(desktopxl){
+                        display: none;
+                    }
+                }
+                .image-graphic-desktop{
+                    display: none;
+                    @include breakpoint(desktopxl){
+                        display: block;
+                        position: absolute;
+                        bottom: -10%;
+                        right: -3%;
+                    }
                 }
             }
             .description{
@@ -89,15 +181,40 @@
                         justify-content: flex-start;
                         align-items: center;
                         gap: 10px;
+                        @include breakpoint(tablet){
+                            justify-content: center;
+                        }
+                        @include breakpoint(desktopxl){
+                            justify-content: flex-start;
+                            margin-bottom: 20px;
+                        }
                         h3{
                             font-size: 17px;
                             width: 55%;
                             font-weight: normal;
+                            @include breakpoint(tablethorizontal){
+                                font-size: 25px;
+                                width: 65%;
+                            }
+                            @include breakpoint(desktopxl){
+                                width: 75%;
+                            }
                         }
                     }
                     p{
                         font-size: 15px;
                         width: 94%;
+                        @include breakpoint(tablet){
+                            text-align: center;
+                        }
+                        @include breakpoint(tablethorizontal){
+                            font-size: 21px;
+                        }
+                        @include breakpoint(desktopxl){
+                            width: 100%;
+                            font-size: 17px;
+                            text-align: left;
+                        }
                     }
                 }
             }
@@ -109,6 +226,9 @@
             align-items: center;
             gap: 50px;
             margin-bottom: 140px;
+            @include breakpoint(desktopxl){
+                margin-bottom: 200px;
+            }
             .content-title{
                 display: flex;
                 flex-direction: column;
@@ -118,12 +238,21 @@
                 h2{
                     font-size: 45px;
                     font-weight: normal;
+                    @include breakpoint(desktopxl){
+                        font-size: 55px;
+                    }
                 }
                 p{
                     font-size: 17px;
                     font-weight: normal;
                     text-align: center;
                     width: 70%;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 25px;
+                    }
                 }
             }
             .images-content{
@@ -132,7 +261,11 @@
                 justify-content: center;
                 align-items: center;
                 gap: 30px;
-                article{
+                @include breakpoint(desktopxl){
+                    flex-direction: row;
+                    align-items: stretch;
+                }
+                .macbok{
                     padding:30px 20px 30px 20px;
                     display: flex;
                     flex-direction: column;
@@ -142,28 +275,108 @@
                     background-color: $white;
                     width: 70%;
                     border-radius: 10px;
+                    @include breakpoint(tablethorizontal){
+                        width: 80%;
+                    }
+                    @include breakpoint(desktopxl){
+                        padding: 40px 20px 40px 20px;
+                        gap: 60px;
+                    }
                     h3{
                         color: $black-dark;
                         font-size: 17px;
                         width: 55%;
                         font-weight: normal;
                         text-align: center;
+                        @include breakpoint(tablethorizontal){
+                            font-size: 25px;
+                        }
                     }
                     p{
                         color: $silver;
                         font-size: 13px;
                         font-weight: normal;
                         text-align: center;
+                        @include breakpoint(tablethorizontal){
+                            font-size: 21px;
+                            width: 70%;
+                        }
+                        @include breakpoint(desktopxl){
+                            margin-bottom: 40px
+                        }
                     }
                     .button-blue{
                         @include button-blue;
-                        &:hover{
-                            background-color: $black;
-                            color: $blue;
+                        @include breakpoint(desktopxl){
+                            margin-bottom: 20px;
+                            font-size: 21px;
+                            padding: 15px 60px
                         }
                     }
-                    img{
+                    .macbok-mobile{
                         width: 100%;
+                        @include breakpoint(desktopxl){
+                            display: none;
+                        }
+                    }
+                    .macbok-desktop{
+                        display: none;
+                        @include breakpoint(desktopxl){
+                            display: block;
+                        }
+                    }
+                }
+                .notifications{
+                    padding:30px 20px 30px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 50px;
+                    background-color: $white;
+                    width: 70%;
+                    border-radius: 10px;
+                    @include breakpoint(tablethorizontal){
+                        width: 80%;
+                    }
+                    h3{
+                        color: $black-dark;
+                        font-size: 17px;
+                        width: 55%;
+                        font-weight: normal;
+                        text-align: center;
+                        @include breakpoint(tablethorizontal){
+                            font-size: 25px;
+                        }
+                    }
+                    p{
+                        color: $silver;
+                        font-size: 13px;
+                        font-weight: normal;
+                        text-align: center;
+                        @include breakpoint(tablethorizontal){
+                            font-size: 21px;
+                            width: 70%;
+                        }
+                    }
+                    .button-blue{
+                        @include button-blue;
+                        @include breakpoint(desktopxl){
+                            font-size: 21px;
+                            padding: 15px 60px
+                        }
+                    }
+                    .notifications-mobile{
+                        width: 100%;
+                        @include breakpoint(desktopxl){
+                            display: none;
+                        }
+                    }
+                    .notifications-desktop{
+                        display: none;
+                        @include breakpoint(desktopxl){
+                            display: block;
+                        }
                     }
                 }
             }
@@ -175,6 +388,9 @@
             align-items: center;
             gap: 40px;
             margin-bottom: 140px;
+            @include breakpoint(desktopxl){
+                margin-bottom: 200px;
+            }
             .gallery-title{
                 display: flex;
                 flex-direction: column;
@@ -185,12 +401,21 @@
                     font-size: 45px;
                     font-weight: normal;
                     text-align: center;
+                    @include breakpoint(desktopxl){
+                        font-size: 55px;
+                    }
                 }
                 p{
                     font-size: 17px;
                     font-weight: normal;
                     text-align: center;
                     width: 70%;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 25px;
+                    }
                 }
             }
             .gallery-images-mobile{
@@ -199,28 +424,70 @@
                 justify-content: center;
                 align-items: center;
                 gap: 30px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 .image-1-gallery-mobile{
                     width: 88%;
                     border-radius: 15px;
+                    @include breakpoint(tablethorizontal){
+                        width: 100%;
+                    }
                 }
                 .image-2-gallery-mobile{
                     width: 86%;
                     border-radius: 15px;
+                    @include breakpoint(tablethorizontal){
+                        width: 98%;
+                    }
                 }
                 .image-3-gallery-mobile{
                     width: 84%;
                     border-radius: 15px;
+                    @include breakpoint(tablethorizontal){
+                        width: 96%;
+                    }
                 }
                 .image-4-gallery-mobile{
                     width: 82%;
                     border-radius: 15px;
+                    @include breakpoint(tablethorizontal){
+                        width: 94%;
+                    }
                 }
             }
             .gallery-images-desktop{
                 display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .upers-images{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        justify-content: center;
+                        img{
+                            border-radius: 15px;
+                        }
+                    }
+                    .lowers-images{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        img{
+                            border-radius: 15px;
+                        }
+                    }
+                }
             }
             .button-black{
                 @include button-black;
+                @include breakpoint(desktopxl){
+                    font-size: 21px;
+                    padding: 15px 60px
+                }
             }
         }
         .partners{
@@ -230,6 +497,9 @@
             align-items: center;
             gap: 40px;
             margin-bottom: 140px;
+            @include breakpoint(desktopxl){
+                margin-bottom: 200px;
+            }
             .partners-title{
                 display: flex;
                 flex-direction: column;
@@ -240,29 +510,54 @@
                     font-size: 45px;
                     font-weight: normal;
                     text-align: center;
+                    @include breakpoint(desktopxl){
+                        font-size: 55px;
+                    }
                 }
                 p{
                     font-size: 17px;
                     font-weight: normal;
                     text-align: center;
                     width: 70%;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 25px;
+                    }
                 }
             }
             .partners-icons{
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                @include breakpoint(desktopxl){
+                    flex-direction: row;
+                    gap: 75px;
+                    justify-content: space-between;
+                    align-items: center;
+                }
                 .icons-upers{
                     display: flex;
                     gap: 35px;
+                    @include breakpoint(tablethorizontal){
+                        gap: 75px;
+                    }
                 }
                 .icons-lowers{
                     display: flex;
                     gap: 35px;
+                    @include breakpoint(tablethorizontal){
+                        gap: 75px;
+                    }
                 }
             }
             .button-black{
                 @include button-black;
+                @include breakpoint(desktopxl){
+                    font-size: 21px;
+                    padding: 15px 60px
+                }
             }
         }
         .testimonials{
@@ -270,10 +565,18 @@
             flex-direction: column;
             gap: 40px;
             margin-bottom: 140px;
+            @include breakpoint(desktopxl){
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 200px;
+            }
             h2{
                 font-size: 45px;
                 font-weight: normal;
                 text-align: center;
+                @include breakpoint(desktopxl){
+                    font-size: 55px;
+                }
             }
             .testimonials-mobile{
                 display: flex;
@@ -281,6 +584,9 @@
                 justify-content: center;
                 align-items: center;
                 gap: 30px;
+                @include breakpoint(desktopxl){
+                    display: none;
+                }
                 article{
                     display: flex;
                     flex-direction: column;
@@ -296,18 +602,140 @@
                             width: 65%;
                             font-size: 17px;
                             font-weight: normal;
+                            @include breakpoint(tablethorizontal){
+                                font-size: 25px;
+                            }
                         }
                     }
                     p{
                         font-size: 15px;
                         font-weight: normal;
                         text-align: left;
+                        @include breakpoint (tablethorizontal){
+                            font-size: 21px;
+                        }
                     }
                 }
             }
             .testimonials-desktop{
                 display: none;
+                @include breakpoint(desktopxl){
+                    display: block;
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    .testimonials-left{
+                        display: flex;
+                        flex-direction: column;
+                        width: 35%;
+                        gap: 20px;
+                        .claire{
+                            border: 3px solid #565656;
+                            border-radius: 15px;
+                            padding:30px 40px 40px 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            .title-testimonials{
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                h3{
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    width: 40%;
+                                }
+                            }
+                            p{
+                                font-size: 15px;
+                                font-weight: normal;
+                                text-align: left;
+                            }
+                        }
+                        .ralph{
+                            border: 3px solid #565656;
+                            border-radius: 15px;
+                            padding:30px 40px 30px 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            .title-testimonials{
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                h3{
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    width: 40%;
+                                }
+                            }
+                            p{
+                                font-size: 15px;
+                                font-weight: normal;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .testimonials-right{
+                        display: flex;
+                        flex-direction: column;
+                        width: 35%;
+                        gap: 20px;
+                        .francisco{
+                            border: 3px solid #565656;
+                            border-radius: 15px;
+                            padding:30px 40px 40px 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            .title-testimonials{
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                h3{
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    width: 50%;
+                                }
+                            }
+                            p{
+                                font-size: 15px;
+                                font-weight: normal;
+                                text-align: left;
+                            }
+                        }
+                        .jorge{
+                            border: 3px solid #565656;
+                            border-radius: 15px;
+                            padding:30px 40px 30px 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                            .title-testimonials{
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                h3{
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    width: 50%;
+                                }
+                            }
+                            p{
+                                font-size: 15px;
+                                font-weight: normal;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+
+
+
+
+

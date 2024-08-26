@@ -1,53 +1,97 @@
 .footer-principal{
     margin-bottom: 140px;
-    .footer-uls{
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-        margin-bottom: 80px;
-        margin-left: 20%;
-        ul{
+    .container{
+        @include breakpoint(desktopxl){
+            display: flex;
+            max-width: 70%;
+            justify-content: space-between;
+            @include breakpoint(desktopxxl){
+                max-width: 60%;
+                justify-content: space-between;
+            }
+        }
+        .footer-uls{
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            .head{
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 30px;
+            gap: 70px;
+            margin-bottom: 80px;
+            margin-left: 20%;
+            @include breakpoint(desktopxl){
+                margin-bottom: 0px;
+                margin-left: 0;
+                flex-direction: row;
+                gap: 100px;
             }
-            a{
-                text-decoration: none;
-                font-size: 18px;
-                font-weight: normal;
-            }
-        }
-    }
-    .footer-socials{
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        margin-left: 20%;
-        .location{
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            p{
-                font-size: 14px;
-            }
-        }
-        .phone{
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            p{
-                font-size: 14px;
-            }
-        }
-        .redes{
             ul{
                 display: flex;
-                gap: 25px;
+                flex-direction: column;
+                gap: 15px;
+                .head{
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 25px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 20px;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: normal;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .footer-socials{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-left: 20%;
+            @include breakpoint(desktopxl){
+                margin-left: 0;
+            }
+            .location{
+                display: flex;
+                gap: 15px;
                 align-items: center;
+                p{
+                    font-size: 14px;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 14px;
+                    }
+                }
+            }
+            .phone{
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                p{
+                    font-size: 14px;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 21px;
+                    }
+                    @include breakpoint(desktopxl){
+                        font-size: 14px;
+                    }
+                }
+            }
+            .redes{
+                ul{
+                    display: flex;
+                    gap: 25px;
+                    align-items: center;
+                }
             }
         }
     }

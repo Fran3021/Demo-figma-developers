@@ -1,24 +1,74 @@
 .header-principal{
     padding-top: 20px;
     margin-bottom: 100px;
+    @include breakpoint(tablethorizontal){
+        margin-bottom: 150px;
+    }
+    @include breakpoint(desktopxl){
+        padding-top: 40px;
+    }
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .logo-figma{
+        .logo-figma-mobile{
             width: 40%;
+            @include breakpoint (tablet){
+                width: 25%;
+            }
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .logo-figma-desktop{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+            }
         }
         .menu-header-desktop{
             display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                display: flex;
+                align-items: center;
+                gap: 150px;
+                .menu-desktop{
+                    display: flex;
+                    gap: 50px;
+                    a{
+                    text-decoration: none;
+                    font-size: 21px
+                    }
+                }
+                .login-desktop{
+                    .button{
+                        @include button-black;
+                        @include breakpoint(desktopxl){
+                            font-size: 21px;
+                            padding: 15px 60px;
+                        }
+                    }
+                }
+            }
         }
         .menu-header-mobile{
+            @include breakpoint(desktopxl){
+                display: none;
+            }
             ul{
                 display: flex;
                 align-items: center;
                 gap: 16px;
+                @include breakpoint(tablethorizontal){
+                    gap: 65px
+                }
                 .button{
                     @include button-black;
                     font-size: 13px;
+                    @include breakpoint(tablethorizontal){
+                        font-size: 18px;
+                    }
                 }
                 .menu-desplegable{
                     position: relative;
@@ -39,17 +89,26 @@
                         opacity: 0;
                         visibility: hidden;
                         overflow: hidden;
-                        transition: opacity 2s ease, visibility 2s ease ;
+                        transition: opacity 2s ease, visibility 2s ease;
+                        @include breakpoint(tablethorizontal){
+                            gap: 10px;
+                        }
                         a{
                             text-decoration: none;
                             font-size: 13px;
                             &:hover{
                                 color: $blue;
                             }
+                            @include breakpoint(tablethorizontal){
+                                font-size: 18px;
+                            }
                         }
                     }
                     img{
                         width: 70%;
+                        @include breakpoint(tablethorizontal){
+                            width: 80%;
+                        }
                     }
                 }
             }
