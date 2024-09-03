@@ -1,5 +1,6 @@
 # Diseño responsive - Figma para desarrolladores -
 
+![Portada del repositorio](./img/image-portada.png)
 
 # Tecnologias
 - HTML
